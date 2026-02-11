@@ -23,5 +23,5 @@ jobs:
         java-version: '21'
     - name: Install dependencies
       run: |
-        java HelloWorldApp.java
+        java -jar Test01.jar
 
