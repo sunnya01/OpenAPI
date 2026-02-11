@@ -224,7 +224,8 @@
 							"pm.visualizer.set(template, constructVisualizerPayload());"
 						],
 						"type": "text/javascript",
-						"packages": {}
+						"packages": {},
+						"requests": {}
 					}
 				}
 			],
@@ -255,7 +256,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"MESSAGE\": {\r\n    \"ITEM\": [\r\n      {\r\n        \"CHARG\": \"2024061203\",\r\n        \"POSNR\": \"10\",\r\n        \"LGORT\": \"3000\",\r\n        \"LFIMG\": 500,\r\n        \"ZZFHPC\": \"BH22205001Q\",\r\n        \"MATNR\": \"80207262\"\r\n      }\r\n    ],\r\n    \"AENAM\": \"蔡纪龙\",\r\n    \"WADAT_IST\": \"20250603\",\r\n    \"VBELN_DN\": \"8000006191\",\r\n    \"YWCJ\": \"2\"\r\n  },\r\n  \"BASEINFO\": {\r\n    \"SERVICE_NAME\": \"IS_ZIF030_MES_420\",\r\n    \"TAR_SYS\": \"\",\r\n    \"RETRY_TIMES\": \"0\",\r\n    \"SEND_TIME\": \"20250508183024\",\r\n    \"TRACE_ID\": \"\",\r\n    \"SRC_SYS\": \"MES\"\r\n  }\r\n}",
+					"raw": "{\r\n    \"MESSAGE\": {\r\n        \"ITEM\": [\r\n            {\r\n                \"CHARG\": \"2024061203\",\r\n                \"POSNR\": \"10\",\r\n                \"LGORT\": \"3000\",\r\n                \"LFIMG\": 500,\r\n                \"ZZFHPC\": \"BH22205001Q\",\r\n                \"MATNR\": \"80207262\"\r\n            }\r\n        ],\r\n        \"AENAM\": \"蔡纪龙\",\r\n        \"WADAT_IST\": \"20250603\",\r\n        \"VBELN_DN\": \"8000006191\",\r\n        \"YWCJ\": \"2\"\r\n    },\r\n    \"BASEINFO\": {\r\n        \"SERVICE_NAME\": \"IS_ZIF030_MES_420\",\r\n        \"TAR_SYS\": \"\",\r\n        \"RETRY_TIMES\": \"0\",\r\n        \"SEND_TIME\": \"20250508183024\",\r\n        \"TRACE_ID\": \"\",\r\n        \"SRC_SYS\": \"MES\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
