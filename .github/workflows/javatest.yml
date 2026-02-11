@@ -1,8 +1,10 @@
 name:  "执行jar"
-on: 
-	push:
+
+on:
+push:
+
 jobs:
-	test: 
+	test:
 		runs-on: ubuntu-latest
 	steps:
 		- name: 检出代码
