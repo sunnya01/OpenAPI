@@ -1,9 +1,7 @@
 name:  "执行jar"
 
 on: 
-	push_request:
-		branches:
-			- main
+	push:
 
 jobs:
 	test: 
