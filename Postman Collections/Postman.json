@@ -150,7 +150,7 @@
 			"response": []
 		},
 		{
-			"name": "交货单过账 Copy",
+			"name": "交货单",
 			"event": [
 				{
 					"listen": "test",
@@ -228,7 +228,7 @@
 					}
 				}
 			],
-			"id": "ad60c148-8a8a-4581-9000-3df6b8c335fa",
+			"id": "22291a81-26f3-4bad-bfeb-81315dd68d92",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -290,185 +290,10 @@
 					]
 				}
 			},
-			"response": [
-				{
-					"id": "858d5e40-0c1d-4700-ad24-a93b31d698fe",
-					"name": "交货单查询-冲销",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "clientid",
-								"value": "com.huayou.esb.opr.mesbm",
-								"type": "text"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json; charset=utf-8",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"baseinfo\": {\r\n        \"trace_id\": \"5db3a73319631edf8fff1e099f6cf4be\",\r\n        \"send_time\": \"20240712104629\",\r\n        \"src_sys\": \"SAP_S4D301\",\r\n        \"tar_sys\": \"MES\",\r\n        \"service_name\": \"IS_ZIF030_MES_420\",\r\n        \"retry_times\": \"0\"\r\n    },\r\n    \"message\": {\r\n        \"vbeln_dn\": \"8000006382\",\r\n        \"ywcj\": \"2\",\r\n        \"wadat_ist\": \"20250429\",\r\n        \"aenam\": \"80003640\",\r\n        \"item\": [\r\n            {\r\n                \"lgort\": \"4000\",\r\n                \"lfimg\": 11,\r\n                \"zzfhpc\": \"\",\r\n                \"charg\": \"2023120501\",\r\n                \"matnr\": \"60000056\",\r\n                \"posnr\": \"10\"\r\n            }\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://192.168.100.201:8000/sap/zhy/cm/zmain_zzdn?sap-client=301&business_type=MES_C01",
-							"protocol": "http",
-							"host": [
-								"192",
-								"168",
-								"100",
-								"201"
-							],
-							"port": "8000",
-							"path": [
-								"sap",
-								"zhy",
-								"cm",
-								"zmain_zzdn"
-							],
-							"query": [
-								{
-									"key": "sap-client",
-									"value": "301"
-								},
-								{
-									"key": "business_type",
-									"value": "MES_C01"
-								}
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "set-cookie",
-							"value": "MYSAPSSO2=AjQxMDMBABhIAFkAXwBTAEMAVwAgACAAIAAgACAAIAACAAYzADAAMQADABBTADQARAAgACAAIAAgACAABAAYMgAwADIANQAwADQAMgA4ADAANgA1ADgABQAEAAAACAYAAlgACQACMQD%2fAPwwgfkGCSqGSIb3DQEHAqCB6zCB6AIBATELMAkGBSsOAwIaBQAwCwYJKoZIhvcNAQcBMYHIMIHFAgEBMBowDjEMMAoGA1UEAxMDUzREAggKICMFKBMVATAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjUwNDI4MDY1ODQ5WjAjBgkqhkiG9w0BCQQxFgQUhj5CQXsyDLnm9MB3X1nOeBOKqC4wCQYHKoZIzjgEAwQvMC0CFBviaHVmwtTJX8wxyJcv%21N0y%21r2KAhUAvdcwpq1MyTxDp2tiWbVzXUGnLwc%3d; path=/; domain=.168.100.201; secure"
-						},
-						{
-							"key": "set-cookie",
-							"value": "SAP_SESSIONID_S4D_301=KhxtW6aALiSC-Y0uuOP-Qjyqffsj_hHwpJZds6czGWM%3d; path=/; secure"
-						},
-						{
-							"key": "content-type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "content-length",
-							"value": "396"
-						},
-						{
-							"key": "sap-server",
-							"value": "true"
-						},
-						{
-							"key": "sap-perf-fesrec",
-							"value": "1720449.000000"
-						}
-					],
-					"cookie": [],
-					"responseTime": null,
-					"body": "{\n    \"DATA\": {\n        \"BASEINFO\": {\n            \"TRACE_ID\": \"5DB3A73319631FE088FFC7B5EF02A498\",\n            \"SEND_TIME\": \"20250428145851\",\n            \"SRC_SYS\": \"SAP_S4D301\",\n            \"TAR_SYS\": \"MES\",\n            \"SERVICE_NAME\": \"IS_ZIF030_MES_400\",\n            \"RETRY_TIMES\": \"0\"\n        },\n        \"MESSAGE\": {\n            \"STATUS\": \"S\",\n            \"MESSAGE\": \"单号8000006382:冲销成功\",\n            \"MBLNR\": \"4900021793\",\n            \"MJAHR\": 2025,\n            \"ZDATE\": \"2025-04-28\",\n            \"ZTIME\": \"14:58:51\"\n        }\n    },\n    \"STATUS\": \"S\",\n    \"MESSAGE\": \"单号8000006382:冲销成功\"\n}"
-				},
-				{
-					"id": "78b272b4-f778-46f9-a3c1-eb25534d5d66",
-					"name": "交货单查询-过账",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "clientid",
-								"value": "com.huayou.esb.opr.mesbm",
-								"type": "text"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json; charset=utf-8",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"baseinfo\": {\r\n        \"trace_id\": \"5db3a73319631edf8fff1e099f6cf4be\",\r\n        \"send_time\": \"20240712104629\",\r\n        \"src_sys\": \"SAP_S4D301\",\r\n        \"tar_sys\": \"MES\",\r\n        \"service_name\": \"IS_ZIF030_MES_420\",\r\n        \"retry_times\": \"0\"\r\n    },\r\n    \"message\": {\r\n        \"vbeln_dn\": \"8000006382\",\r\n        \"ywcj\": \"1\",\r\n        \"wadat_ist\": \"20250429\",\r\n        \"aenam\": \"80003640\",\r\n        \"item\": [\r\n            {\r\n                \"lgort\": \"4000\",\r\n                \"lfimg\": 20,\r\n                \"zzfhpc\": \"\",\r\n                \"charg\": \"2023120501\",\r\n                \"posnr\": \"10\"\r\n            },\r\n            {\r\n                \"lgort\": \"4000\",\r\n                \"lfimg\": 30,\r\n                \"zzfhpc\": \"\",\r\n                \"charg\": \"2023120501\",\r\n                \"posnr\": \"10\"\r\n            }\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://192.168.100.201:8000/sap/zhy/cm/zmain_zzdn?sap-client=301&business_type=MES_C01",
-							"protocol": "http",
-							"host": [
-								"192",
-								"168",
-								"100",
-								"201"
-							],
-							"port": "8000",
-							"path": [
-								"sap",
-								"zhy",
-								"cm",
-								"zmain_zzdn"
-							],
-							"query": [
-								{
-									"key": "sap-client",
-									"value": "301"
-								},
-								{
-									"key": "business_type",
-									"value": "MES_C01"
-								}
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "set-cookie",
-							"value": "MYSAPSSO2=AjQxMDMBABhIAFkAXwBTAEMAVwAgACAAIAAgACAAIAACAAYzADAAMQADABBTADQARAAgACAAIAAgACAABAAYMgAwADIANQAwADQAMgA4ADAANwAwADYABQAEAAAACAYAAlgACQACMQD%2fAPwwgfkGCSqGSIb3DQEHAqCB6zCB6AIBATELMAkGBSsOAwIaBQAwCwYJKoZIhvcNAQcBMYHIMIHFAgEBMBowDjEMMAoGA1UEAxMDUzREAggKICMFKBMVATAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMjUwNDI4MDcwNjE3WjAjBgkqhkiG9w0BCQQxFgQUTQjtGYfFRrJMZnQl3m32hTkgC%21EwCQYHKoZIzjgEAwQvMC0CFF0sveSG6q36YkjkmH5wDoa8bSW5AhUAu%218XpRv7zIM8llN9UahxWnq9Y1U%3d; path=/; domain=.168.100.201; secure"
-						},
-						{
-							"key": "set-cookie",
-							"value": "SAP_SESSIONID_S4D_301=x_UObFvFFJSVvzC2j2wqnEcR9Ykj_xHwpvBds6czGWM%3d; path=/; secure"
-						},
-						{
-							"key": "content-type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "content-length",
-							"value": "351"
-						},
-						{
-							"key": "sap-server",
-							"value": "true"
-						},
-						{
-							"key": "sap-perf-fesrec",
-							"value": "1665767.000000"
-						}
-					],
-					"cookie": [],
-					"responseTime": null,
-					"body": "{\n    \"DATA\": {\n        \"BASEINFO\": {\n            \"TRACE_ID\": \"5DB3A73319631FE088FFE91634A386FF\",\n            \"SEND_TIME\": \"20250428150619\",\n            \"SRC_SYS\": \"SAP_S4D301\",\n            \"TAR_SYS\": \"MES\",\n            \"SERVICE_NAME\": \"IS_ZIF030_MES_400\",\n            \"RETRY_TIMES\": \"0\"\n        },\n        \"MESSAGE\": {\n            \"STATUS\": \"S\",\n            \"MESSAGE\": \"交货单过账成功!\",\n            \"MBLNR\": \"\",\n            \"MJAHR\": 0,\n            \"ZDATE\": \"\",\n            \"ZTIME\": \"\"\n        }\n    },\n    \"STATUS\": \"S\",\n    \"MESSAGE\": \"交货单过账成功!\"\n}"
-				}
-			]
+			"response": []
 		},
 		{
-			"name": "客户主数据查询 Copy",
+			"name": "客户主数据查询",
 			"event": [
 				{
 					"listen": "test",
