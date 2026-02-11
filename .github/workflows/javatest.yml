@@ -1,8 +1,6 @@
 name:  "执行jar"
-
 on: 
 	push:
-
 jobs:
 	test: 
 		runs-on: ubuntu-latest
