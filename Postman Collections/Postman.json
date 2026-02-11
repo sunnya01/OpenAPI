@@ -224,7 +224,16 @@
 							"pm.visualizer.set(template, constructVisualizerPayload());"
 						],
 						"type": "text/javascript",
-						"packages": {}
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "55d2037e-bbb9-461b-a798-b4f0fadf2228",
+						"exec": [],
+						"type": "text/javascript"
 					}
 				}
 			],
