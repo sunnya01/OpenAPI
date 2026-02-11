@@ -1,19 +1,17 @@
 name:  "执行jar"
-
 on:
 push:
-
 jobs:
 test:
 runs-on: ubuntu-latest
 steps:
 - name: 检出代码
-uses: actions/checkout@v6
+   uses: actions/checkout@v6
 - name: 设置JDK17
-uses: actions/setup-java@v4
-with: 
-java-version: "17"
+   uses: actions/setup-java@v4
+   with: 
+      java-version: "17"
 - name: 执行jar
-run: |
-java -jar Test01.jar
+   run: |
+   java -jar Test01.jar
 		
