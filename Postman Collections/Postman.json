@@ -150,149 +150,6 @@
 			"response": []
 		},
 		{
-			"name": "交货单",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "41b5c331-ccd2-441a-8ba7-bc71df0afdf3",
-						"exec": [
-							"var template = `\r",
-							"<style type=\"text/css\">\r",
-							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
-							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
-							"    .tftable tr {background-color:#ffffff;}\r",
-							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
-							"    .tftable tr:hover {background-color:#e0ffff;}\r",
-							"</style>\r",
-							"\r",
-							"<table class=\"tftable\" border=\"1\">\r",
-							"    <tr>\r",
-							"        <th>RBUKRS</th>\r",
-							"        <th>GJAHR</th>\r",
-							"        <th>BELNR</th>\r",
-							"        <th>DOCLN</th>\r",
-							"        <th>RYEAR</th>\r",
-							"        <th>POPER</th>\r",
-							"        <th>BUDAT</th>\r",
-							"        <th>RACCT</th>\r",
-							"        <th>TXT20</th>\r",
-							"        <th>GKONT</th>\r",
-							"        <th>TXT50</th>\r",
-							"        <th>RCNTR</th>\r",
-							"        <th>KTEXT</th>\r",
-							"        <th>PRCTR</th>\r",
-							"        <th>RFAREA</th>\r",
-							"        <th>KSL</th>\r",
-							"        <th>MSL</th>\r",
-							"        <th>RUNIT</th>\r",
-							"        <th>BKTXT</th>\r",
-							"        <th>GKOAR</th>\r",
-							"    </tr>\r",
-							"    \r",
-							"    {{#each response.DATA.MESSAGE.IT_MESSAGE}}\r",
-							"        <tr>\r",
-							"            <td>{{RBUKRS}}</td>\r",
-							"            <td>{{GJAHR}}</td>\r",
-							"            <td>{{BELNR}}</td>\r",
-							"            <td>{{DOCLN}}</td>\r",
-							"            <td>{{RYEAR}}</td>\r",
-							"            <td>{{POPER}}</td>\r",
-							"            <td>{{BUDAT}}</td>\r",
-							"            <td>{{RACCT}}</td>\r",
-							"            <td>{{TXT20}}</td>\r",
-							"            <td>{{GKONT}}</td>\r",
-							"            <td>{{TXT50}}</td>\r",
-							"            <td>{{RCNTR}}</td>\r",
-							"            <td>{{KTEXT}}</td>\r",
-							"            <td>{{PRCTR}}</td>\r",
-							"            <td>{{RFAREA}}</td>\r",
-							"            <td>{{KSL}}</td>\r",
-							"            <td>{{MSL}}</td>\r",
-							"            <td>{{RUNIT}}</td>\r",
-							"            <td>{{BKTXT}}</td>\r",
-							"            <td>{{GKOAR}}</td>\r",
-							"        </tr>\r",
-							"    {{/each}}\r",
-							"</table>\r",
-							"`;\r",
-							"\r",
-							"function constructVisualizerPayload() {\r",
-							"    return {response: pm.response.json()}\r",
-							"}\r",
-							"\r",
-							"pm.visualizer.set(template, constructVisualizerPayload());"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"id": "22291a81-26f3-4bad-bfeb-81315dd68d92",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"password": "Aa12345678",
-						"username": "HY_SCW"
-					}
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "clientid",
-						"value": "com.huayou.esb.opr.mesbm",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/json; charset=utf-8",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"MESSAGE\": {\r\n    \"ITEM\": [\r\n      {\r\n        \"CHARG\": \"2024061203\",\r\n        \"POSNR\": \"10\",\r\n        \"LGORT\": \"3000\",\r\n        \"LFIMG\": 500,\r\n        \"ZZFHPC\": \"BH22205001Q\",\r\n        \"MATNR\": \"80207262\"\r\n      }\r\n    ],\r\n    \"AENAM\": \"蔡纪龙\",\r\n    \"WADAT_IST\": \"20250603\",\r\n    \"VBELN_DN\": \"8000006191\",\r\n    \"YWCJ\": \"2\"\r\n  },\r\n  \"BASEINFO\": {\r\n    \"SERVICE_NAME\": \"IS_ZIF030_MES_420\",\r\n    \"TAR_SYS\": \"\",\r\n    \"RETRY_TIMES\": \"0\",\r\n    \"SEND_TIME\": \"20250508183024\",\r\n    \"TRACE_ID\": \"\",\r\n    \"SRC_SYS\": \"MES\"\r\n  }\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://192.168.100.201:8000/sap/zhy/cm/zmain_zzdn?sap-client=301&business_type=MES_C01",
-					"protocol": "http",
-					"host": [
-						"192",
-						"168",
-						"100",
-						"201"
-					],
-					"port": "8000",
-					"path": [
-						"sap",
-						"zhy",
-						"cm",
-						"zmain_zzdn"
-					],
-					"query": [
-						{
-							"key": "sap-client",
-							"value": "301"
-						},
-						{
-							"key": "business_type",
-							"value": "MES_C01"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "客户主数据查询",
 			"event": [
 				{
@@ -434,6 +291,242 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "会计凭证查询",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "41b5c331-ccd2-441a-8ba7-bc71df0afdf3",
+						"exec": [
+							"var template = `\r",
+							"<style type=\"text/css\">\r",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+							"    .tftable tr {background-color:#ffffff;}\r",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+							"    .tftable tr:hover {background-color:#e0ffff;}\r",
+							"</style>\r",
+							"\r",
+							"<table class=\"tftable\" border=\"1\">\r",
+							"    <tr>\r",
+							"        <th>RBUKRS</th>\r",
+							"        <th>GJAHR</th>\r",
+							"        <th>BELNR</th>\r",
+							"        <th>DOCLN</th>\r",
+							"        <th>RYEAR</th>\r",
+							"        <th>POPER</th>\r",
+							"        <th>BUDAT</th>\r",
+							"        <th>RACCT</th>\r",
+							"        <th>TXT20</th>\r",
+							"        <th>GKONT</th>\r",
+							"        <th>TXT50</th>\r",
+							"        <th>RCNTR</th>\r",
+							"        <th>KTEXT</th>\r",
+							"        <th>PRCTR</th>\r",
+							"        <th>RFAREA</th>\r",
+							"        <th>KSL</th>\r",
+							"        <th>MSL</th>\r",
+							"        <th>RUNIT</th>\r",
+							"        <th>BKTXT</th>\r",
+							"        <th>GKOAR</th>\r",
+							"    </tr>\r",
+							"    \r",
+							"    {{#each response.DATA.MESSAGE.IT_MESSAGE}}\r",
+							"        <tr>\r",
+							"            <td>{{RBUKRS}}</td>\r",
+							"            <td>{{GJAHR}}</td>\r",
+							"            <td>{{BELNR}}</td>\r",
+							"            <td>{{DOCLN}}</td>\r",
+							"            <td>{{RYEAR}}</td>\r",
+							"            <td>{{POPER}}</td>\r",
+							"            <td>{{BUDAT}}</td>\r",
+							"            <td>{{RACCT}}</td>\r",
+							"            <td>{{TXT20}}</td>\r",
+							"            <td>{{GKONT}}</td>\r",
+							"            <td>{{TXT50}}</td>\r",
+							"            <td>{{RCNTR}}</td>\r",
+							"            <td>{{KTEXT}}</td>\r",
+							"            <td>{{PRCTR}}</td>\r",
+							"            <td>{{RFAREA}}</td>\r",
+							"            <td>{{KSL}}</td>\r",
+							"            <td>{{MSL}}</td>\r",
+							"            <td>{{RUNIT}}</td>\r",
+							"            <td>{{BKTXT}}</td>\r",
+							"            <td>{{GKOAR}}</td>\r",
+							"        </tr>\r",
+							"    {{/each}}\r",
+							"</table>\r",
+							"`;\r",
+							"\r",
+							"function constructVisualizerPayload() {\r",
+							"    return {response: pm.response.json()}\r",
+							"}\r",
+							"\r",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "96a8916d-e25b-41da-be35-6d2d466e2b73",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "",
+						"username": ""
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "clientid",
+						"value": "com.huayou.esb.opr.mesbm",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; charset=utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"MESSAGE\": {\r\n        \"RBUKRS\": \"4110\",\r\n        \"FISCYEARPER\": null,\r\n        \"WERKS\": [\r\n            {\r\n                \"WERKS\": null\r\n            }\r\n        ],\r\n        \"RACCT\": [\r\n            {\r\n                \"RACCT\": \"5001022101\"\r\n            }\r\n        ],\r\n        \"BUDAT\": \"20250624\"\r\n    },\r\n    \"BASEINFO\": {\r\n        \"SERVICE_NAME\": \"IS_ZIF030_MES_350\",\r\n        \"TAR_SYS\": \"\",\r\n        \"RETRY_TIMES\": \"0\",\r\n        \"SEND_TIME\": \"20250624175525\",\r\n        \"TRACE_ID\": \"\",\r\n        \"SRC_SYS\": \"MES\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.100.201:8000/sap/zhy/cm/zmain_zzacc?sap-client=301&business_type=MES_Q01",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"100",
+						"201"
+					],
+					"port": "8000",
+					"path": [
+						"sap",
+						"zhy",
+						"cm",
+						"zmain_zzacc"
+					],
+					"query": [
+						{
+							"key": "sap-client",
+							"value": "301"
+						},
+						{
+							"key": "business_type",
+							"value": "MES_Q01"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "0dcccc26-a451-4621-8b62-fdda2c0d9a28",
+					"name": "会计凭证查询",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "clientid",
+								"value": "com.huayou.esb.opr.mesbm",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"baseinfo\": {\r\n        \"trace_id\": \"5db3a73319631edf8fff1e099f6cf4be\",\r\n        \"send_time\": \"20240712104629\",\r\n        \"src_sys\": \"sap_s4d301\",\r\n        \"tar_sys\": \"mes\",\r\n        \"service_name\": \"IS_ZIF030_MES_350\",\r\n        \"retry_times\": \"0\"\r\n    },\r\n    \"message\": {\r\n        \"rbukrs\": \"4080\",\r\n        \"budat\": \"20250326\",\r\n        \"fiscyearper\": 2025003,\r\n        \"gkont\": [\r\n            {\r\n                \"gkont\": \"2202030002\"\r\n            }\r\n        ],\r\n        \"werks\": [\r\n            {\r\n                \"werks\": \"4080\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.100.201:8000/sap/zhy/cm/zmain_zzacc?sap-client=301&business_type=MES_Q01",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"100",
+								"201"
+							],
+							"port": "8000",
+							"path": [
+								"sap",
+								"zhy",
+								"cm",
+								"zmain_zzacc"
+							],
+							"query": [
+								{
+									"key": "sap-client",
+									"value": "301"
+								},
+								{
+									"key": "business_type",
+									"value": "MES_Q01"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "set-cookie",
+							"value": "sap-usercontext=sap-client=301; path=/"
+						},
+						{
+							"key": "set-cookie",
+							"value": "SAP_SESSIONID_S4D_301=IYgJvcJvsNumh8EXeD9p8MOG9uVQ2BHwvamVmyokBbo%3d; path=/"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "1051"
+						},
+						{
+							"key": "sap-server",
+							"value": "true"
+						},
+						{
+							"key": "sap-perf-fesrec",
+							"value": "231000.000000"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"DATA\": {\n        \"BASEINFO\": {\n            \"TRACE_ID\": \"959B2A2405BA1FE0949B1870DEDCDDA9\",\n            \"SEND_TIME\": \"20250624165357\",\n            \"SRC_SYS\": \"SAP_S4D301\",\n            \"TAR_SYS\": \"MES\",\n            \"SERVICE_NAME\": \"IS_ZIF030_MES_350\",\n            \"RETRY_TIMES\": \"0\"\n        },\n        \"MESSAGE\": {\n            \"IT_MESSAGE\": [\n                {\n                    \"RBUKRS\": \"4080\",\n                    \"GJAHR\": 2025,\n                    \"BELNR\": \"5000000021\",\n                    \"DOCLN\": \"000001\",\n                    \"RYEAR\": 2025,\n                    \"POPER\": 3,\n                    \"BUDAT\": \"2025-03-26\",\n                    \"RACCT\": \"1403020101\",\n                    \"TXT20\": \"原材料-液体辅料\",\n                    \"GKONT\": \"2202030002\",\n                    \"TXT50\": \"应付账款-应付暂估款-暂估辅料款\",\n                    \"RCNTR\": \"\",\n                    \"KTEXT\": \"\",\n                    \"PRCTR\": \"408000\",\n                    \"RFAREA\": \"\",\n                    \"KSL\": -172850.35,\n                    \"MSL\": -737060,\n                    \"RUNIT\": \"KG\",\n                    \"BKTXT\": \"\",\n                    \"GKOAR\": \"S\"\n                },\n                {\n                    \"RBUKRS\": \"4080\",\n                    \"GJAHR\": 2025,\n                    \"BELNR\": \"5000000020\",\n                    \"DOCLN\": \"000001\",\n                    \"RYEAR\": 2025,\n                    \"POPER\": 3,\n                    \"BUDAT\": \"2025-03-26\",\n                    \"RACCT\": \"1403020101\",\n                    \"TXT20\": \"原材料-液体辅料\",\n                    \"GKONT\": \"2202030002\",\n                    \"TXT50\": \"应付账款-应付暂估款-暂估辅料款\",\n                    \"RCNTR\": \"\",\n                    \"KTEXT\": \"\",\n                    \"PRCTR\": \"408000\",\n                    \"RFAREA\": \"\",\n                    \"KSL\": 172850.35,\n                    \"MSL\": 737060,\n                    \"RUNIT\": \"KG\",\n                    \"BKTXT\": \"\",\n                    \"GKOAR\": \"S\"\n                }\n            ],\n            \"STATUS\": \"S\",\n            \"MESSAGE\": \"查询到2条数据！\"\n        }\n    },\n    \"STATUS\": \"S\",\n    \"MESSAGE\": \"查询到2条数据！\"\n}"
+				}
+			]
 		}
 	]
 }
