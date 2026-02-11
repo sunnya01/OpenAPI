@@ -10,6 +10,4 @@ steps:
   with:
     distribution: 'temurin' # See 'Supported distributions' for available options
     java-version: '21'
-      - name: **直接在 GitHub 服务器上运行 JAR 测试**
-        run: |
-          java -jar Test01.jar
+- run: java -jar Test01.jar
