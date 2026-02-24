@@ -1,13 +1,13 @@
 {
 	"info": {
 		"_postman_id": "9e47dd1a-5394-40f7-95c2-9a0e2d4c5361",
-		"name": "华友接口测试集合 Copy",
+		"name": "华友接口测试集合",
 		"description": "111",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "交货单查询 Copy",
+			"name": "交货单查询",
 			"event": [
 				{
 					"listen": "test",
@@ -121,7 +121,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://192.168.100.201:8000/sap/zhy/cm/zmain_zzdn?sap-client=301&business_type=MES_Q05",
+					"raw": "http://192.168.100.201:8000/sap/zhy/cm/zmain_zzdn?sap-client=301&business_type=MES_Q01",
 					"protocol": "http",
 					"host": [
 						"192",
@@ -143,7 +143,7 @@
 						},
 						{
 							"key": "business_type",
-							"value": "MES_Q05"
+							"value": "MES_Q01"
 						}
 					]
 				}
