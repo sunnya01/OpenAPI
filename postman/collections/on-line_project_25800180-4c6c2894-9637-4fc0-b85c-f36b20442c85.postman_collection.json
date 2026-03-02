@@ -1,0 +1,1014 @@
+{
+  "info": {
+    "_postman_id": "4c6c2894-9637-4fc0-b85c-f36b20442c85",
+    "name": "on-line_project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "极星SD",
+      "item": [
+        {
+          "name": "APP->SAP客户主数据创建",
+          "id": "51f4c5bc-3995-425c-b3f8-154898ecf8a2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"TITLE_LET\": \"100009001\",\r\n    \"NAME_ORG1\": \"123\",\r\n    \"REGIO\": \"010\",\r\n    \"CITY1\": \"shanghai\",\r\n    \"STREET\": \"123\",\r\n    \"TELF1\": \"18892621702\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/sd001?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "sd001"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "BPM->SAP供应商主数据创建",
+          "id": "ee6e33d7-9237-493c-90dd-468dc6c46d98",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "POLESTAR_INT",
+                  "type": "string"
+                },
+                {
+                  "key": "password",
+                  "value": "Pxjv1234567890@",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"BU_GROUP\": \"Z002\",\r\n    \"LIFNR\": \"5012\",\r\n    \"NAME1\": \"吉利汽车\",\r\n    \"LAND1\": \"CN\",\r\n    \"ORT01\": \"上海市\",\r\n    \"STRAS\": \"珠海市科技创新海岸魅族科技楼001\",\r\n    \"TELF1\": \"18612345678\",\r\n    \"EMAIL\": \"anqi.zhang@meizu.com\",\r\n    \"EKORG\": \"4020\",\r\n    \"ZTERM\": \"0001\",\r\n    \"WAERS\": \"CNY\",\r\n    \"AKONT\": \"2202010201\",\r\n    \"SPERR\": \"\",\r\n    \"BANK\": [\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        },\r\n        {\r\n            \"BANKS\": \"CN\",\r\n            \"BANKK\": \"BKCHCNBJ300\",\r\n            \"BANKN\": \"6\",\r\n            \"ACCNAME\": \"中国银行上海市支行\",\r\n            \"KOINH\": \"张三\"\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/sd005?sap-client=100",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "sd005"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "100"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "BPM->SAP内部订单创建",
+          "id": "b5b20749-7df3-4cfd-b32e-15c5f0217e1b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "password",
+                  "value": "",
+                  "type": "string"
+                },
+                {
+                  "key": "username",
+                  "value": "zif_user",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"AUART\": \"Z003\",\r\n    \"AUFNR\": \"A10012qweqw3\",\r\n    \"KTEXT\": \"测试极星03\",\r\n    \"BUKRS\": \"4010\",\r\n    \"CYCLE\": \"40110008\",\r\n    \"OPRTYPE\": \"ADD\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/co001?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "co001"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "APP->SAP非整车零售销售明细接收接口",
+          "id": "7282bc84-7171-4fcf-8a80-1770693cc281",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "123",
+                  "value": "12323",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/sd003?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "sd003"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "BPM->SAP采购订单创建接口",
+          "id": "c2df0dbd-78ab-4050-bd06-2fcc0b5d1e64",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"BPMPOID\": \"9999\",\r\n    \"EBELN\": \"\",\r\n    \"EKORG\": \"4010\",\r\n    \"EKGRP\": \"200\",\r\n    \"BUKRS\": \"4010\",\r\n    \"BEDAT\": \"20230926\",\r\n    \"BSART\": \"ZC03\",\r\n    \"LIFNR\": \"10001\",\r\n    \"ZTERM\": \"\",\r\n    \"DETAIL\": [\r\n        {\r\n            \"EBELP\": \"00010\",\r\n            \"KNTTP\": \"K\",\r\n            \"TXZ01\": \"测试\",\r\n            \"MENGE\": 1,\r\n            \"EEIND\": \"20230926\",\r\n            \"NETPR\": 100,\r\n            \"WAERS\": \"CNY\",\r\n            \"MATKL\": \"\",\r\n            \"WERKS\": \"\",\r\n            \"SAKTO\": \"\",\r\n            \"KOSTL\": \"\",\r\n            \"AUFNR\": \"\",\r\n            \"WEBRE\": \"\",\r\n            \"MWSKZ\": \"\",\r\n            \"LOEKZ\": \"\",\r\n            \"RETPO\": \"\",\r\n            \"ZCARTYPE\": \"\",\r\n            \"ZMENDIAN\": \"\",\r\n            \"ZPINGTAI\": \"\",\r\n            \"ZPRCTR\": \"\",\r\n            \"IS_CONVRT\": \"\",\r\n            \"REMARK\": \"\"\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/mm002?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "mm002"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "EHR->SAP员工供应商创建接口",
+          "id": "0e846df5-2dd4-4f1f-addd-99e0d734576b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": " Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"NAME1\": \"\",\r\n    \"NAME2\": \"\",\r\n    \"NAME3\": \"\",\r\n    \"SORTL\": \"\",\r\n    \"LAND1\": \"\",\r\n    \"ORT01\": \"\",\r\n    \"PSTLZ\": \"\",\r\n    \"STRAS\": \"\",\r\n    \"TELF1\": \"\",\r\n    \"TELF2\": \"\",\r\n    \"EMAIL\": \"\",\r\n    \"BANKS\": \"\",\r\n    \"BANKK\": \"\",\r\n    \"BANKN\": \"\",\r\n    \"ACCNAME\": \"\",\r\n    \"KOINH\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/fi001?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "fi001"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "BPM->SAP销售价格主数据接收接口",
+          "id": "ba769c17-c3fe-45f2-be8a-e66224e14ffe",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/sd004?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "sd004"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "金税->SAP非整车金税发票回传",
+          "id": "7af29456-819a-4a98-a9ce-742cdc2356eb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"KSCHL\": \"ZP01\",\r\n    \"MATNR\": \"2024814PCPB\",\r\n    \"VARCOND\": \"\",\r\n    \"KBETR\": 100,\r\n    \"DATAB\": \"20231007\",\r\n    \"DATBI\": \"99991231\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/sd004?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "sd004"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "BPM->SAP po收货凭证冲销接口",
+          "id": "2fad062e-1b51-49c0-8996-c1716d4c7379",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "guid",
+                "value": "0ad2831239asd12j",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"BPMGRID\": \"JHJC202310070001\",\r\n    \"BWART\": \"102\",\r\n    \"BLDAT\": \"20231008\",\r\n    \"BUDAT\": \"20231008\",\r\n    \"EBELN\": \"4600000002\",\r\n    \"SMBLN\": \"5000000032\",\r\n    \"ITEMS\": [\r\n        {\r\n            \"EBELP\": \"00010\",\r\n            \"ERFMG\": \"1.00\"\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/mm005?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "mm005"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "BPM->SAP po收货接口",
+          "id": "22344498-60bd-4466-b418-081b117e3190",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "guid",
+                "value": "0ad2831239asd12j",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"BPMGRID\": \"JHJC202310070001\",\r\n    \"BWART\": \"101\",\r\n    \"BLDAT\": \"20231008\",\r\n    \"BUDAT\": \"20231008\",\r\n    \"EBELN\": \"4600000002\",\r\n    \"SMBLN\": \"\",\r\n    \"ITEMS\": [\r\n        {\r\n            \"EBELP\": \"00010\",\r\n            \"ERFMG\": \"1.00\"\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/mm005?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "mm005"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "bpm->SAP冲销发票校验凭证",
+          "id": "0a01553c-3cd0-4ef0-9a3a-0b3ea759709f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "guid",
+                "value": "0ad2831239asd12j",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"BLDAT\": \"20231008\",\r\n    \"BUDAT\": \"20231008\",\r\n    \"BUKRS\": \"4010\",\r\n    \"XBLNR\": \"123323432323\",\r\n    \"ZFBDT\": \"20231008\",\r\n    \"XMWST\": \"X\",\r\n    \"EBELN\": \"4600000004\",\r\n    \"STBLG\": \"5105600127\",\r\n    \"ITEMS\": [\r\n        {\r\n            \"EBELP\": \"00010\",\r\n            \"MWSKZ\": \"J1\"\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/mm006?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "mm006"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "bpm->SAP创建发票校验凭证",
+          "id": "cdfb76a0-d4be-4c64-bd69-49d7623c6cf6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "guid",
+                "value": "0ad2831239asd12j",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"BLDAT\": \"20231008\",\r\n    \"BUDAT\": \"20231008\",\r\n    \"BUKRS\": \"4010\",\r\n    \"XBLNR\": \"123323432323\",\r\n    \"ZFBDT\": \"20231008\",\r\n    \"XMWST\": \"X\",\r\n    \"EBELN\": \"4600000004\",\r\n    \"STBLG\": \"\",\r\n    \"ITEMS\": [\r\n        {\r\n            \"EBELP\": \"00010\",\r\n            \"MWSKZ\": \"J1\"\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/mm006?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "mm006"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "汇联易->SAP费用报销",
+          "id": "98881fc4-57ff-409a-8b03-69cf069a2b9f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "guid",
+                "value": "0ad2831239asd12j",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"BUKRS\": \"4010\",\r\n    \"BLDAT\": \"20231101\",\r\n    \"BUDAT\": \"20231101\",\r\n    \"BKTXT\": \"报销001\",\r\n    \"AUFNR\": \"20000001\",\r\n    \"ZTYPE\": \"03\",\r\n    \"LIFNR\": \"610037\",\r\n    \"XBLNR\": \"10000001\",\r\n    \"DETAIL\": [\r\n        {\r\n            \"BUZEI\": \"001\",\r\n            \"DMBTR\": 87,\r\n            \"MWSKZ\": \"J1\",\r\n            \"SGTXT\": \"报销测试001\",\r\n            \"KOSTL\": \"40130107\",\r\n            \"HKONT\": \"8010021501\",\r\n            \"ZFBDT\": \"20231130\"\r\n        },{\r\n            \"BUZEI\": \"002\",\r\n            \"DMBTR\": 13,\r\n            \"MWSKZ\": \"\",\r\n            \"SGTXT\": \"报销测试001\",\r\n            \"KOSTL\": \"\",\r\n            \"HKONT\": \"2221010301\",\r\n            \"ZFBDT\": \"20231130\"\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/fi003?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "fi003"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "金税->SAP开票信息回传",
+          "id": "15247747-aed9-4bb9-908c-c11bdac4fb51",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"VBELN\": \"\",\r\n    \"POSNR\": 0,\r\n    \"ZJSFP\": \"\",\r\n    \"ZJSRQ\": \"\",\r\n    \"ZJSMC\": \"\",\r\n    \"ZJSJE\": \"\",\r\n    \"ZJSJJ\": \"\",\r\n    \"ZJSSE\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/sd002?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "sd002"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "金税->SAP整车金税开票信息回传",
+          "id": "476644ea-0311-4f48-9778-13f44bdeeab5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"BSTNK\": \"\",\r\n    \"ZJSFP\": \"\",\r\n    \"ZJSRQ\": \"\",\r\n    \"ZJSMC\": \"\",\r\n    \"ZJSJE\": \"\",\r\n    \"ZJSJJ\": \"\",\r\n    \"ZJSSE\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/sd005?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "sd005"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "BPM->SAP采购价格同步",
+          "id": "a1dfe0c7-5143-45c5-8c6e-c331e492025b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"KSCHL\": \"ZP02\",\r\n    \"MATNR\": \"2024814PAPB\",\r\n    \"VARCOND\": \"71700\",\r\n    \"KUNNR\": \"0000004020\",\r\n    \"KBETR\": \"7\",\r\n    \"DATAB\": \"20231116\",\r\n    \"DATBI\": \"20231124\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/sd004?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "sd004"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "BPM->SAP成本中心回传",
+          "id": "4f708a81-4078-46ae-88e8-457c5a890730",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n    {\r\n        \"KOSTL\": \"4668\",\r\n        \"KTEXT\": \"测试成本08\",\r\n        \"LTEXT\": \"为了测试创建08\",\r\n        \"VERAK\": \"09\",\r\n        \"KOSAR\": \"L\",\r\n        \"KHINR\": \"4011\",\r\n        \"BUKRS\": \"4010\",\r\n        \"FUNC_AREA\": \"0001\",\r\n        \"PRCTR\": \"4002\"\r\n    }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/fi004?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "fi004"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "BPM->SAP利润中心回传",
+          "id": "332b3637-00ad-433b-b823-d514c63e3920",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"KTEXT\": \"测试成本08\",\r\n    \"LTEXT\": \"为了测试创建08\",\r\n    \"VERAK\": \"09\",\r\n    \"PRCTR\": \"4003\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/fi005?sap-client=110",
+              "protocol": "https",
+              "host": [
+                "xingji",
+                "huc",
+                "ecs",
+                "sapcloud",
+                "cn"
+              ],
+              "path": [
+                "sap",
+                "bc",
+                "zif_restful",
+                "fi005"
+              ],
+              "query": [
+                {
+                  "key": "sap-client",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "0785862d-b5c0-47c9-ac25-60239aea223a"
+    }
+  ]
+}

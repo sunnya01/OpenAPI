@@ -1,0 +1,19 @@
+{
+  "workspace": {
+    "id": "ba2b2fe3-c16f-4143-8fcb-d45ca3673977"
+  },
+  "entities": {
+    "collections": [
+      "../postman/collections/PO_Learning_25800180-035920b0-26df-4a47-8c63-a9ece86d1f48.postman_collection.json",
+      "../postman/collections/CFA_Interface_25800180-135b6c17-65cc-4bf9-b59e-62d84451148f.postman_collection.json",
+      "../postman/collections/external_25800180-234e82d6-7eaa-4ef0-8530-1f2530c81d76.postman_collection.json",
+      "../postman/collections/on-line_project_25800180-4c6c2894-9637-4fc0-b85c-f36b20442c85.postman_collection.json",
+      "../postman/collections/极星整车批售(测试)_25800180-96b7b133-eeaf-4364-928f-30daab960c5c.postman_collection.json",
+      "../postman/collections/汇联易_25800180-d378aeb2-88dd-48f5-b145-0a76800f97eb.postman_collection.json"
+    ],
+    "environments": [],
+    "specs": [],
+    "flows": [],
+    "globals": []
+  }
+}

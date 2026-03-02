@@ -1,0 +1,86 @@
+{
+  "info": {
+    "_postman_id": "234e82d6-7eaa-4ef0-8530-1f2530c81d76",
+    "name": "external",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "id": "54b2ab10-fce6-469f-a659-a76347394f45",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "BPM->SA",
+      "id": "9f503d81-9ef1-4d3b-b78d-da30dba505ca",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Basic emlmX3VzZXI6QWExMjM0NTY3ODkwMTIzNCE=",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"LIFNR\": \"\",\r\n    \"DETAIL\": [\r\n        {\r\n            \"KSCHL\": \"\",\r\n            \"MATNR\": \"\",\r\n            \"NETPR\": \"\",\r\n            \"VARCOND\": \"\",\r\n            \"DATAB\": \"\",\r\n            \"DATBI\": \"\"\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://xingji.huc.ecs.sapcloud.cn/sap/bc/zif_restful/mm003?sap-client=110",
+          "protocol": "https",
+          "host": [
+            "xingji",
+            "huc",
+            "ecs",
+            "sapcloud",
+            "cn"
+          ],
+          "path": [
+            "sap",
+            "bc",
+            "zif_restful",
+            "mm003"
+          ],
+          "query": [
+            {
+              "key": "sap-client",
+              "value": "110"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "fi007",
+      "id": "0fac6f9c-4bdd-409c-9bfc-5ba90c7f9643",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
