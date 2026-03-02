@@ -1,0 +1,776 @@
+{
+  "info": {
+    "_postman_id": "135b6c17-65cc-4bf9-b59e-62d84451148f",
+    "name": "CFA_Interface",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "银行余额查询",
+      "id": "b66ddd57-b14d-4e7e-8cca-8d1c3ad95bf7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sourceSystem",
+            "value": "SAP",
+            "type": "text"
+          },
+          {
+            "key": "targetSystem",
+            "value": "CFA",
+            "type": "text"
+          },
+          {
+            "key": "serviceName",
+            "value": "CFA_GET_ACCOUNT_BALANCE",
+            "type": "text"
+          },
+          {
+            "key": "requestId",
+            "value": "{{$guid}}",
+            "type": "text"
+          },
+          {
+            "key": "x-xencio-client-id",
+            "value": "xjmz",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "esbmtest.xjmz.com/v1.0/esbService/cfa/common/api?accountNo=2002024609100020310&securityCode=8D03609E721304CEEAEF08B1544933E6",
+          "host": [
+            "esbmtest",
+            "xjmz",
+            "com"
+          ],
+          "path": [
+            "v1.0",
+            "esbService",
+            "cfa",
+            "common",
+            "api"
+          ],
+          "query": [
+            {
+              "key": "accountNo",
+              "value": "2002024609100020310"
+            },
+            {
+              "key": "securityCode",
+              "value": "8D03609E721304CEEAEF08B1544933E6"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "5135879e-6c9f-436e-bb16-6f13b9eae578",
+          "name": "200-成功",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "sourceSystem",
+                "value": "SAP",
+                "type": "text"
+              },
+              {
+                "key": "targetSystem",
+                "value": "CFA",
+                "type": "text"
+              },
+              {
+                "key": "serviceName",
+                "value": "CFA_GET_ACCOUNT_BALANCE",
+                "type": "text"
+              },
+              {
+                "key": "requestId",
+                "value": "{{$guid}}",
+                "type": "text"
+              },
+              {
+                "key": "x-xencio-client-id",
+                "value": "xjmz",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "esbmtest.xjmz.com/v1.0/esbService/cfa/common/api?accountNo=2002024609100020310&securityCode=8D03609E721304CEEAEF08B1544933E6",
+              "host": [
+                "esbmtest",
+                "xjmz",
+                "com"
+              ],
+              "path": [
+                "v1.0",
+                "esbService",
+                "cfa",
+                "common",
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "accountNo",
+                  "value": "2002024609100020310"
+                },
+                {
+                  "key": "securityCode",
+                  "value": "8D03609E721304CEEAEF08B1544933E6"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "name": "Content-Type",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n    \"code\": \"200\",\n    \"data\": [\n        {\n            \"accountCode\": \"2002024609100020310\",\n            \"accountName\": \"珠海市魅族科技有限公司\",\n            \"accountType\": \"\",\n            \"agreementAmount\": 0,\n            \"avgYearlyBalance\": 0,\n            \"bankAccountId\": 20,\n            \"bankInfoId\": 0,\n            \"bankName\": \"ICBC\",\n            \"beginBalance\": -85493688.74,\n            \"benford\": 0,\n            \"changeEnterpriseId\": 0,\n            \"changeType\": \"0\",\n            \"closedFlag\": 0,\n            \"creditId\": 0,\n            \"currency\": \"CNY\",\n            \"currentBalance\": 199999.9999998808,\n            \"dataFrom\": \"20230103\",\n            \"dataFromId\": 20230103,\n            \"dataTo\": \"20230808\",\n            \"dataToId\": 20230808,\n            \"dateToLong\": 0,\n            \"defaultPaymentFlag\": 0,\n            \"directConnectFlag\": 1,\n            \"endBalance\": 200000,\n            \"endDateId\": 0,\n            \"enterpriseValid\": 1,\n            \"groupId\": 0,\n            \"isClaim\": 0,\n            \"isMatch\": 0,\n            \"isPaper\": 0,\n            \"leId\": 20,\n            \"listInterest\": [],\n            \"logId\": 0,\n            \"needConfirm\": 0,\n            \"onlyErrorLineFlag\": 0,\n            \"specialFlag\": \"\",\n            \"startDateId\": 0,\n            \"systemBalance\": 0,\n            \"totalCrAmount\": 1060033638.93,\n            \"totalDrAmount\": 974339950.19,\n            \"totalRecordCr\": 931,\n            \"totalRecordDr\": 1289,\n            \"whetherAgreement\": \"0\",\n            \"year\": 0\n        }\n    ],\n    \"status\": \"200\",\n    \"successResponse\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "交易流水",
+      "id": "59e3e231-b7f0-4d21-9b51-9d268d0ce402",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sourceSystem",
+            "value": "SAP",
+            "type": "text"
+          },
+          {
+            "key": "targetSystem",
+            "value": "CFA",
+            "type": "text"
+          },
+          {
+            "key": "serviceName",
+            "value": "CFA_GET_BANK_SLIP",
+            "type": "text"
+          },
+          {
+            "key": "requestId",
+            "value": "{{$guid}}",
+            "type": "text"
+          },
+          {
+            "key": "x-xencio-client-id",
+            "value": "xjmz",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"dayFromId\":\"20231006\",\r\n\t\"dayToId\":\"20231107\",\r\n\t\"accountNo\":\"3202008719200712879\",\r\n\t\"pageNow\":1,\r\n\t\"pageSize\":200\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "esbmtest.xjmz.com/v1.0/esbService/cfa/common/api?securityCode=8D03609E721304CEEAEF08B1544933E6",
+          "host": [
+            "esbmtest",
+            "xjmz",
+            "com"
+          ],
+          "path": [
+            "v1.0",
+            "esbService",
+            "cfa",
+            "common",
+            "api"
+          ],
+          "query": [
+            {
+              "key": "securityCode",
+              "value": "8D03609E721304CEEAEF08B1544933E6"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "440e6601-a5d1-4131-b8fd-e6f107648849",
+          "name": "200-成功",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "sourceSystem",
+                "value": "SAP",
+                "type": "text"
+              },
+              {
+                "key": "targetSystem",
+                "value": "CFA",
+                "type": "text"
+              },
+              {
+                "key": "serviceName",
+                "value": "CFA_GET_BANK_SLIP",
+                "type": "text"
+              },
+              {
+                "key": "requestId",
+                "value": "{{$guid}}",
+                "type": "text"
+              },
+              {
+                "key": "x-xencio-client-id",
+                "value": "xjmz",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\t\"dayFromId\":\"20231006\",\r\n\t\"dayToId\":\"20231107\",\r\n\t\"accountNo\":\"3202008719200712879\",\r\n\t\"pageNow\":1,\r\n\t\"pageSize\":200\r\n}"
+            },
+            "url": {
+              "raw": "esbmtest.xjmz.com/v1.0/esbService/cfa/common/api?securityCode=8D03609E721304CEEAEF08B1544933E6",
+              "host": [
+                "esbmtest",
+                "xjmz",
+                "com"
+              ],
+              "path": [
+                "v1.0",
+                "esbService",
+                "cfa",
+                "common",
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "securityCode",
+                  "value": "8D03609E721304CEEAEF08B1544933E6"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "name": "Content-Type",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n    \"code\": \"200\",\n    \"data\": {\n        \"searchBankStatementList\": [\n            {\n                \"attachments\": \"0\",\n                \"accountName\": \"珠海市魅族科技有限公司\",\n                \"leId\": \"20\",\n                \"bank\": \"ICBC\",\n                \"bankComments\": \"\",\n                \"bankTrxNumber\": \"3b958cc117c3befacd79b1b795541325\",\n                \"customerReference\": \"\",\n                \"currency\": \"CNY\",\n                \"transFlag\": \"P\",\n                \"transTypeName\": \"供应商采购\",\n                \"customerBank\": \"\",\n                \"drAmount\": \"100.0\",\n                \"crAmount\": \"0.0\",\n                \"trxDate\": \"2023-10-20 00:00:00\",\n                \"bankStatementId\": \"7127\",\n                \"createDate\": \"2023-10-20 15:21:44\",\n                \"cashType\": \"转账\",\n                \"accountingDateId\": \"20231020\",\n                \"balanceAmount\": \"4302754.16\",\n                \"customerName\": \"深圳市中天迅通信技术股份有限公司\",\n                \"bankReceipts\": \"[]\",\n                \"catalogName\": \"供应商采购\",\n                \"transAmount\": \"100.0\",\n                \"accountMaskNo\": \"3202008719200712879\",\n                \"instructionId\": \"\",\n                \"customerAccountMaskNo\": \"79140155200001200\",\n                \"userMemo\": \"测试-原因代码1-预付其他V3\"\n            },\n            {\n                \"attachments\": \"0\",\n                \"accountName\": \"珠海市魅族科技有限公司\",\n                \"leId\": \"20\",\n                \"bank\": \"ICBC\",\n                \"bankComments\": \"\",\n                \"bankTrxNumber\": \"6e59e85f154d3c5bd9520a30a588bfcd\",\n                \"customerReference\": \"\",\n                \"currency\": \"CNY\",\n                \"transFlag\": \"P\",\n                \"transTypeName\": \"供应商采购\",\n                \"customerBank\": \"\",\n                \"drAmount\": \"100.0\",\n                \"crAmount\": \"0.0\",\n                \"trxDate\": \"2023-10-20 00:00:00\",\n                \"bankStatementId\": \"7126\",\n                \"createDate\": \"2023-10-20 15:21:44\",\n                \"cashType\": \"转账\",\n                \"accountingDateId\": \"20231020\",\n                \"balanceAmount\": \"4302854.16\",\n                \"customerName\": \"深圳市中天迅通信技术股份有限公司\",\n                \"bankReceipts\": \"[]\",\n                \"catalogName\": \"供应商采购\",\n                \"transAmount\": \"100.0\",\n                \"accountMaskNo\": \"3202008719200712879\",\n                \"instructionId\": \"100020233100000124001\",\n                \"customerAccountMaskNo\": \"79140155200001200\",\n                \"userMemo\": \"测试-原因代码1-预付其他V2\"\n            },\n            {\n                \"attachments\": \"0\",\n                \"accountName\": \"珠海市魅族科技有限公司\",\n                \"leId\": \"20\",\n                \"bank\": \"ICBC\",\n                \"bankComments\": \"\",\n                \"bankTrxNumber\": \"fb707c2291fa33c28c2792f167fd2c89\",\n                \"customerReference\": \"\",\n                \"currency\": \"CNY\",\n                \"transFlag\": \"P\",\n                \"transTypeName\": \"供应商采购\",\n                \"customerBank\": \"\",\n                \"drAmount\": \"100.0\",\n                \"crAmount\": \"0.0\",\n                \"trxDate\": \"2023-10-20 00:00:00\",\n                \"bankStatementId\": \"7125\",\n                \"createDate\": \"2023-10-20 15:21:44\",\n                \"cashType\": \"转账\",\n                \"accountingDateId\": \"20231020\",\n                \"balanceAmount\": \"4302954.16\",\n                \"customerName\": \"深圳市中天迅通信技术股份有限公司\",\n                \"bankReceipts\": \"[]\",\n                \"catalogName\": \"供应商采购\",\n                \"transAmount\": \"100.0\",\n                \"accountMaskNo\": \"3202008719200712879\",\n                \"instructionId\": \"100020233100000123001\",\n                \"customerAccountMaskNo\": \"79140155200001200\",\n                \"userMemo\": \"测试-原因代码1-设备款 V2\"\n            },\n            {\n                \"attachments\": \"0\",\n                \"accountName\": \"珠海市魅族科技有限公司\",\n                \"leId\": \"20\",\n                \"bank\": \"ICBC\",\n                \"bankComments\": \"\",\n                \"bankTrxNumber\": \"44dbced733aa76ffc05c36122276c56f\",\n                \"customerReference\": \"\",\n                \"currency\": \"CNY\",\n                \"transFlag\": \"P\",\n                \"transTypeName\": \"供应商采购\",\n                \"customerBank\": \"\",\n                \"drAmount\": \"100.0\",\n                \"crAmount\": \"0.0\",\n                \"trxDate\": \"2023-10-20 00:00:00\",\n                \"bankStatementId\": \"7124\",\n                \"createDate\": \"2023-10-20 15:21:44\",\n                \"cashType\": \"转账\",\n                \"accountingDateId\": \"20231020\",\n                \"balanceAmount\": \"4303054.16\",\n                \"customerName\": \"深圳市中天迅通信技术股份有限公司\",\n                \"bankReceipts\": \"[]\",\n                \"catalogName\": \"供应商采购\",\n                \"transAmount\": \"100.0\",\n                \"accountMaskNo\": \"3202008719200712879\",\n                \"instructionId\": \"100020233100000121001\",\n                \"customerAccountMaskNo\": \"79140155200001200\",\n                \"userMemo\": \"测试-原因代码1-材料款V2\"\n            }\n        ],\n        \"pageable\": {\n            \"exportMaxRows\": 0,\n            \"hasNext\": false,\n            \"hasPre\": false,\n            \"isFirst\": true,\n            \"isLast\": true,\n            \"pageNow\": 1,\n            \"pageSize\": 200,\n            \"startPos\": 0,\n            \"totalCount\": 4,\n            \"totalPageCount\": 1\n        },\n        \"searchable\": {\n            \"accountId\": 0,\n            \"accountNo\": \"3202008719200712879\",\n            \"accountingDateId\": 0,\n            \"amountOperate\": \"=\",\n            \"appInput\": 0,\n            \"attachVirtualAccount\": false,\n            \"cashMovementType\": \"cashmovement\",\n            \"dateFrom\": \"2023-10-06\",\n            \"dateTo\": \"2023-11-07\",\n            \"dayFromId\": 20231006,\n            \"dayToId\": 20231107,\n            \"endDateId\": 0,\n            \"enterpriseId\": 0,\n            \"exceptAssociatedBankstatement\": 0,\n            \"groupTypeId\": 0,\n            \"includeSubStatement\": 0,\n            \"instructionIdFlag\": 1,\n            \"isHaveReceiptOrder\": 0,\n            \"isSpecialColumn\": false,\n            \"logId\": 0,\n            \"pageNow\": 1,\n            \"pageSize\": 200,\n            \"showDownPayment\": 0,\n            \"sort\": \"trx_date desc\",\n            \"sortableMaxRows\": 50000,\n            \"startDateId\": 0,\n            \"trxAmount\": 0,\n            \"trxDateId\": 0,\n            \"trxTypeId\": 0,\n            \"uploadFromDateId\": 0,\n            \"uploadToDateId\": 0,\n            \"useForBsSearch\": 1,\n            \"useNameExactMatching\": 0\n        }\n    },\n    \"status\": \"200\",\n    \"successResponse\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "银行回单",
+      "id": "17b8f232-4407-4a0f-9b71-e8b8d2d96452",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sourceSystem",
+            "value": "SAP",
+            "type": "text"
+          },
+          {
+            "key": "targetSystem",
+            "value": "CFA",
+            "type": "text"
+          },
+          {
+            "key": "serviceName",
+            "value": "CFA_GET_BANK_RECEIPTS",
+            "type": "text"
+          },
+          {
+            "key": "requestId",
+            "value": "{{$guid}}",
+            "type": "text"
+          },
+          {
+            "key": "x-xencio-client-id",
+            "value": "xjmz",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"RECEIPT_DATE_FROM_ID\":\"20230620\",\r\n\t\"RECEIPT_DATE_TO_ID\":\"20230620\",\r\n\t\"BANK_ACCT_NO\":\"416070100100362358\",\r\n\t\"BANKSTATEMENTID\":\"6517\",\r\n    \"pageNow\":1,\r\n    \"pageSize\":100\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "esbmtest.xjmz.com/v1.0/esbService/cfa/common/api?securityCode=8D03609E721304CEEAEF08B1544933E6",
+          "host": [
+            "esbmtest",
+            "xjmz",
+            "com"
+          ],
+          "path": [
+            "v1.0",
+            "esbService",
+            "cfa",
+            "common",
+            "api"
+          ],
+          "query": [
+            {
+              "key": "securityCode",
+              "value": "8D03609E721304CEEAEF08B1544933E6"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "a90cca1d-0fdd-4318-b9dc-4d1f89a80d79",
+          "name": "200-成功",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "sourceSystem",
+                "value": "SAP",
+                "type": "text"
+              },
+              {
+                "key": "targetSystem",
+                "value": "CFA",
+                "type": "text"
+              },
+              {
+                "key": "serviceName",
+                "value": "CFA_GET_BANK_RECEIPTS",
+                "type": "text"
+              },
+              {
+                "key": "requestId",
+                "value": "{{$guid}}",
+                "type": "text"
+              },
+              {
+                "key": "x-xencio-client-id",
+                "value": "xjmz",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\t\"RECEIPT_DATE_FROM_ID\":\"20230620\",\r\n\t\"RECEIPT_DATE_TO_ID\":\"20230620\",\r\n\t\"BANK_ACCT_NO\":\"416070100100362358\",\r\n\t\"BANKSTATEMENTID\":\"6517\",\r\n    \"pageNow\":1,\r\n    \"pageSize\":100\r\n}"
+            },
+            "url": {
+              "raw": "esbmtest.xjmz.com/v1.0/esbService/cfa/common/api?securityCode=8D03609E721304CEEAEF08B1544933E6",
+              "host": [
+                "esbmtest",
+                "xjmz",
+                "com"
+              ],
+              "path": [
+                "v1.0",
+                "esbService",
+                "cfa",
+                "common",
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "securityCode",
+                  "value": "8D03609E721304CEEAEF08B1544933E6"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "name": "Content-Type",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n    \"code\": \"200\",\n    \"data\": {\n        \"searchBankStatementList\": [\n            {\n                \"AMOUNT\": 100,\n                \"BALANCE\": 208904.37,\n                \"BANK_ACCT_NO\": \"416070100100362358\",\n                \"BANK_DATE\": \"2023-06-20 00:00:00\",\n                \"BANK_NAME\": \"CIB\",\n                \"BANK_REMARK\": \"\",\n                \"BUDAT\": 20230620,\n                \"BUKRS\": \"\",\n                \"CURRENCY\": \"CNY\",\n                \"DIRECTION\": \"S\",\n                \"EBR_NO\": \"\",\n                \"EBR_USE\": \"公司网银服务月费\",\n                \"HBKID\": \"\",\n                \"HKTID\": \"\",\n                \"NAME_ORG1\": \"高通\",\n                \"PART_BANK_ACCT_NO\": \"416070100100362358\",\n                \"PART_BANK_NAME\": \"上海浦东发展银行黄浦支行\",\n                \"POST_TMPL\": \"XJ02\",\n                \"SOURCE_DESC\": \"电子\",\n                \"SRL_NO\": \"97028984004132\",\n                \"SVKOA\": \"K\",\n                \"SVKON\": \"\",\n                \"URL\": [\n                    {\n                        \"fileName\": \"R-C.png\",\n                        \"bankReceiptUrl\": \"http://cfa-dev.xjsd.com/c4c3/api/receipt/download?securityCode=HQ+sBoZFlaNovCCxKbpOpkLJnORY4wU6kBv9lvga2WrsHuojegwjc6KtjI4qGUCXMyGaCqdMalS49bvTwdnKncIgRtexmM84C7CIH1JlB08=\",\n                        \"fileUploadTime\": \"2023-06-20 18:15:01\"\n                    }\n                ],\n                \"bankStatementId\": 6517,\n                \"catalogName\": \"同名户转出\",\n                \"instructionId\": \"102020231700000198001\"\n            }\n        ],\n        \"pageable\": {\n            \"exportMaxRows\": 0,\n            \"hasNext\": false,\n            \"hasPre\": false,\n            \"isFirst\": true,\n            \"isLast\": true,\n            \"pageNow\": 1,\n            \"pageSize\": 10,\n            \"startPos\": 0,\n            \"totalCount\": 1,\n            \"totalPageCount\": 1\n        },\n        \"searchable\": {\n            \"BANK_ACCT_NO\": \"416070100100362358\",\n            \"RECEIPT_DATE_FROM_ID\": 20230620,\n            \"RECEIPT_DATE_TO_ID\": 20230620,\n            \"bankStatementId\": 6517,\n            \"pageNow\": 0,\n            \"pageSize\": 0\n        }\n    },\n    \"status\": \"200\",\n    \"successResponse\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "支付制单",
+      "id": "d7c531c6-4d9f-4cb1-abad-3ff4082905aa",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "sourceSystem",
+            "value": "SAP",
+            "type": "text"
+          },
+          {
+            "key": "targetSystem",
+            "value": "CFA",
+            "type": "text"
+          },
+          {
+            "key": "serviceName",
+            "value": "CFA_CREATE_PAYMENT_DOC",
+            "type": "text"
+          },
+          {
+            "key": "requestId",
+            "value": "{{$guid}}",
+            "type": "text"
+          },
+          {
+            "key": "x-xencio-client-id",
+            "value": "xjmz",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\t\"trxNumber\":\"XJ90000000000135\",\r\n\t\"fromAccountCode\":\"3202008719200676286\",\r\n\t\"fromAccountName\":\"湖北星纪魅族集团有限公司\",\r\n\t\"toAccountCode\":\"1001254009005450043\",\r\n\t\"toAccountName\":\"中国电信股份有限公司上海分公司\",\r\n\t\"toAccountType\":\"0\",\r\n\t\"toBank\":\"中国工商银行上海市分行营业部\",\r\n\t\"toBankNo\":\"102290024433\",\r\n\t\"payAmount\":100.00,\r\n\t\"note\":\"TEST\",\r\n\t\"instructionId\":\"103020231700000181001\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "esbmtest.xjmz.com/v1.0/esbService/cfa/common/api?securityCode=8D03609E721304CEEAEF08B1544933E6",
+          "host": [
+            "esbmtest",
+            "xjmz",
+            "com"
+          ],
+          "path": [
+            "v1.0",
+            "esbService",
+            "cfa",
+            "common",
+            "api"
+          ],
+          "query": [
+            {
+              "key": "securityCode",
+              "value": "8D03609E721304CEEAEF08B1544933E6"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "50f5c9ba-7cd6-40b4-bceb-10c8449c368c",
+          "name": "200-成功",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "sourceSystem",
+                "value": "SAP",
+                "type": "text"
+              },
+              {
+                "key": "targetSystem",
+                "value": "CFA",
+                "type": "text"
+              },
+              {
+                "key": "serviceName",
+                "value": "CFA_CREATE_PAYMENT_DOC",
+                "type": "text"
+              },
+              {
+                "key": "requestId",
+                "value": "{{$guid}}",
+                "type": "text"
+              },
+              {
+                "key": "x-xencio-client-id",
+                "value": "xjmz",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\t\"trxNumber\":\"XJ90000000000135\",\r\n\t\"fromAccountCode\":\"3202008719200676286\",\r\n\t\"fromAccountName\":\"湖北星纪魅族集团有限公司\",\r\n\t\"toAccountCode\":\"1001254009005450043\",\r\n\t\"toAccountName\":\"中国电信股份有限公司上海分公司\",\r\n\t\"toAccountType\":\"0\",\r\n\t\"toBank\":\"中国工商银行上海市分行营业部\",\r\n\t\"toBankNo\":\"102290024433\",\r\n\t\"payAmount\":100.00,\r\n\t\"note\":\"TEST\",\r\n\t\"instructionId\":\"103020231700000181001\"\r\n}"
+            },
+            "url": {
+              "raw": "esbmtest.xjmz.com/v1.0/esbService/cfa/common/api?securityCode=8D03609E721304CEEAEF08B1544933E6",
+              "host": [
+                "esbmtest",
+                "xjmz",
+                "com"
+              ],
+              "path": [
+                "v1.0",
+                "esbService",
+                "cfa",
+                "common",
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "securityCode",
+                  "value": "8D03609E721304CEEAEF08B1544933E6"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "name": "Content-Type",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n    \"code\": \"200\",\n    \"data\": {\n        \"code\": \"C0000\",\n        \"message\": \"提交成功\"\n    },\n    \"status\": \"200\",\n    \"successResponse\": true\n}"
+        },
+        {
+          "id": "ba409660-2816-4e9b-91b1-fc0dd0e3686a",
+          "name": "200-失败",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "sourceSystem",
+                "value": "SAP",
+                "type": "text"
+              },
+              {
+                "key": "targetSystem",
+                "value": "CFA",
+                "type": "text"
+              },
+              {
+                "key": "serviceName",
+                "value": "CFA_CREATE_PAYMENT_DOC",
+                "type": "text"
+              },
+              {
+                "key": "requestId",
+                "value": "{{$guid}}",
+                "type": "text"
+              },
+              {
+                "key": "x-xencio-client-id",
+                "value": "xjmz",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\t\"trxNumber\":\"XJ90000000000135\",\r\n\t\"fromAccountCode\":\"3202008719200676286\",\r\n\t\"fromAccountName\":\"湖北星纪魅族集团有限公司\",\r\n\t\"toAccountCode\":\"1001254009005450043\",\r\n\t\"toAccountName\":\"中国电信股份有限公司上海分公司\",\r\n\t\"toAccountType\":\"0\",\r\n\t\"toBank\":\"中国工商银行上海市分行营业部\",\r\n\t\"toBankNo\":\"102290024433\",\r\n\t\"payAmount\":100.00,\r\n\t\"note\":\"TEST\",\r\n\t\"instructionId\":\"103020231700000181001\"\r\n}"
+            },
+            "url": {
+              "raw": "esbmtest.xjmz.com/v1.0/esbService/cfa/common/api?securityCode=8D03609E721304CEEAEF08B1544933E6",
+              "host": [
+                "esbmtest",
+                "xjmz",
+                "com"
+              ],
+              "path": [
+                "v1.0",
+                "esbService",
+                "cfa",
+                "common",
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "securityCode",
+                  "value": "8D03609E721304CEEAEF08B1544933E6"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "name": "Content-Type",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n    \"code\": \"200\",\n    \"data\": {\n        \"code\": \"C0014\",\n        \"message\": \"交易流水号已存在\"\n    },\n    \"status\": \"200\",\n    \"successResponse\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "查询付款状态",
+      "id": "d6d951b2-2bed-44fa-aaf8-2153a6a7087b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "sourceSystem",
+            "value": "SAP",
+            "type": "text"
+          },
+          {
+            "key": "targetSystem",
+            "value": "CFA",
+            "type": "text"
+          },
+          {
+            "key": "serviceName",
+            "value": "CFA_GET_PAYMENT_STATUS",
+            "type": "text"
+          },
+          {
+            "key": "requestId",
+            "value": "{{$guid}}",
+            "type": "text"
+          },
+          {
+            "key": "x-xencio-client-id",
+            "value": "xjmz",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "esbmtest.xjmz.com/v1.0/esbService/cfa/common/api?trxNumber=XJ90000000000135&securityCode=8D03609E721304CEEAEF08B1544933E6",
+          "host": [
+            "esbmtest",
+            "xjmz",
+            "com"
+          ],
+          "path": [
+            "v1.0",
+            "esbService",
+            "cfa",
+            "common",
+            "api"
+          ],
+          "query": [
+            {
+              "key": "trxNumber",
+              "value": "XJ90000000000135"
+            },
+            {
+              "key": "securityCode",
+              "value": "8D03609E721304CEEAEF08B1544933E6"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "7f7cc542-cf44-461b-9b1c-c2312efcd8f7",
+          "name": "查询付款状态",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "sourceSystem",
+                "value": "SAP",
+                "type": "text"
+              },
+              {
+                "key": "targetSystem",
+                "value": "CFA",
+                "type": "text"
+              },
+              {
+                "key": "serviceName",
+                "value": "CFA_GET_PAYMENT_STATUS",
+                "type": "text"
+              },
+              {
+                "key": "requestId",
+                "value": "{{$guid}}",
+                "type": "text"
+              },
+              {
+                "key": "x-xencio-client-id",
+                "value": "xjmz",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "esbmtest.xjmz.com/v1.0/esbService/cfa/common/api?trxNumber=XJ90000000000135&securityCode=8D03609E721304CEEAEF08B1544933E6",
+              "host": [
+                "esbmtest",
+                "xjmz",
+                "com"
+              ],
+              "path": [
+                "v1.0",
+                "esbService",
+                "cfa",
+                "common",
+                "api"
+              ],
+              "query": [
+                {
+                  "key": "trxNumber",
+                  "value": "XJ90000000000135"
+                },
+                {
+                  "key": "securityCode",
+                  "value": "8D03609E721304CEEAEF08B1544933E6"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "name": "Content-Type",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\n    \"code\": \"200\",\n    \"data\": {\n        \"code\": \"P1111\",\n        \"message\": \"待审核\"\n    },\n    \"status\": \"200\",\n    \"successResponse\": true\n}"
+        }
+      ]
+    }
+  ]
+}

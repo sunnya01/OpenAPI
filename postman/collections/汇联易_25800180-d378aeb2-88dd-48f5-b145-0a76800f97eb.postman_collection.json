@@ -1,0 +1,125 @@
+{
+  "info": {
+    "_postman_id": "d378aeb2-88dd-48f5-b145-0a76800f97eb",
+    "name": "汇联易",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "费用报销状态回传",
+      "id": "1fe2607f-dae5-42e5-a976-35a5183b8ab3",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"businessCode\":\"LA00009576\",\r\n     \"documentCompanyOID\":\"6f12895f-b402-47d3-9799-9bcd31e63799\",\r\n     \"employeeID\":\"110\",\r\n     \"paymentTime\":\"2018-09-05 11:06:23\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://apistage.huilianyi.com/gateway/api/open/expenseReport/v2/paid",
+          "protocol": "https",
+          "host": [
+            "apistage",
+            "huilianyi",
+            "com"
+          ],
+          "path": [
+            "gateway",
+            "api",
+            "open",
+            "expenseReport",
+            "v2",
+            "paid"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "第三方用户登录",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "22b60818-f0ce-45ab-a4b1-2af29fb9c054",
+            "exec": [
+              "postman.setEnvironmentVariable(\"accessToken\", JSON.parse(responseBody).access_token);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "id": "1a4735ba-166b-4823-94e9-266c2553bba7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "ODM2NTI5YzktZWU5NS00N2Q5LWJiNTctMmI0YTE4OWMxNjli",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "f11ac4e3-6908-46f9-acce-aa51273e1faa",
+              "type": "string"
+            },
+            {
+              "key": "saveHelperData",
+              "type": "any"
+            },
+            {
+              "key": "showPassword",
+              "value": false,
+              "type": "boolean"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "text"
+            },
+            {
+              "key": "scope",
+              "value": "write",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://apistage.huilianyi.com/gateway/oauth/token",
+          "protocol": "https",
+          "host": [
+            "apistage",
+            "huilianyi",
+            "com"
+          ],
+          "path": [
+            "gateway",
+            "oauth",
+            "token"
+          ]
+        },
+        "description": "just for test"
+      },
+      "response": []
+    }
+  ]
+}
